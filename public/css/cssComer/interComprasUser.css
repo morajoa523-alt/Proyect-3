@@ -1,0 +1,124 @@
+*{
+    body{
+      margin:0;
+      font-family:Inter, system-ui, sans-serif;
+      background:#f3f4f6;
+      padding:20px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    h1{
+      font-size:2rem;
+      font-weight:700;
+      color:#111827;
+      margin-bottom:20px;
+    }
+
+    .order-card{
+      background:#fff;
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.07);
+      margin-bottom:20px;
+      border:1px solid #e5e7eb;
+    }
+
+    .order-header{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:14px;
+      font-size:1rem;
+      font-weight:600;
+      color:#374151;
+    }
+
+    .order-items{
+      border-top:1px solid #e5e7eb;
+      padding-top:14px;
+      margin-top:10px;
+    }
+
+    .item{
+      display:flex;
+      align-items:center;
+      margin-bottom:14px;
+    }
+
+    .item img{
+      width:70px;
+      height:70px;
+      border-radius:10px;
+      object-fit:cover;
+      margin-right:14px;
+    }
+
+    .item-info{
+      flex-grow:1;
+    }
+
+    .item-info h4{
+      margin:0;
+      font-size:1rem;
+      font-weight:600;
+      color:#111827;
+    }
+
+    .item-info p{
+      margin:4px 0 0;
+      font-size:0.9rem;
+      color:#6b7280;
+    }
+
+    .order-status{
+      padding:8px 12px;
+      border-radius:8px;
+      font-size:0.9rem;
+      font-weight:600;
+      display:inline-block;
+      margin-top:10px;
+    }
+
+    .status-enviado{
+      background:#d1fae5;
+      color:#065f46;
+    }
+
+    .status-proceso{
+      background:#fef3c7;
+      color:#92400e;
+    }
+
+    .status-entregado{
+      background:#dbeafe;
+      color:#1e40af;
+    }
+
+    .order-total{
+      margin-top:14px;
+      font-size:1rem;
+      font-weight:700;
+      color:#111827;
+    }
+
+    .ver-detalles{
+      margin-top:16px;
+      display:inline-block;
+      padding:10px 18px;
+      background:#6366f1;
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .ver-detalles:hover{
+      background:#4f46e5;
+    }
+ 
+}
+

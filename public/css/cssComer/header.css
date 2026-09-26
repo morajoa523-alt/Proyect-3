@@ -1,0 +1,290 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+/* =========================
+   HEADER / TOPBAR
+========================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d11d1d;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Menú principal */
+.menu-items {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.menu-items a:hover,
+.menu-items a:focus-visible {
+  opacity: 0.85;
+}
+
+/* Acciones */
+.menu-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Botones del header */
+.menu-btn {
+  background-color: #eef2ff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn:hover {
+  background-color: #c7d2fe;
+}
+
+.menu-btn:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Enlace dentro del botón (normalizado) */
+.menu-btn a {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+.page {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   FILAS POR TEMA
+========================= */
+.theme-row {
+  margin-bottom: 40px;
+}
+
+.theme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.theme-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.theme-sub {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* =========================
+   CONTROLES DE SCROLL
+========================= */
+.scroll-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.scroll-controls .btn {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.scroll-controls .btn:hover {
+  background: #cbd5f5;
+}
+
+/* =========================
+   PRODUCTOS (SCROLL HORIZONTAL)
+========================= */
+.products {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+.products::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* =========================
+   TARJETA DE PRODUCTO
+========================= */
+.product {
+  min-width: 220px;
+  max-width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.product .name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.product .meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1100;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* =========================
+   DRAWER CARRITO
+========================= */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  max-width: 100%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -4px 0 14px rgba(0,0,0,0.25);
+
+  /* 🔴 OCULTO POR DEFECTO */
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ SOLO visible con .active */
+.cart-drawer.active {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .menu-items {
+    display: none;
+  }
+
+  .product {
+    min-width: 180px;
+    max-width: 180px;
+  }
+}

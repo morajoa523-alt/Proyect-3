@@ -1,0 +1,181 @@
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f1f5f9;
+      color: #1f2937;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 240px;
+      background: #111827;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      color: #cbd5e1;
+    }
+
+    .sidebar a:hover {
+      background: #1f2933;
+      color: #fff;
+    }
+
+    /* MAIN */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER / TOPBAR */
+    .topbar {
+      background: #ffffff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #1e293b;
+    }
+
+    .menu-actions button {
+      background: #eef2ff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .menu-actions button:hover {
+      background: #dbeafe;
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* CARD / FORM */
+    .card {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .card h1 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #111827;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 5px rgba(37,99,235,0.3);
+    }
+
+    /* BOTONES */
+    .form-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+  
